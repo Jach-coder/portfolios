@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Line of Code: Falling in Love with Java</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0a0a12;
+      --primary: #00f0ff;
+      --secondary: #ff00f0;
+      --text: #e0e0e0;
+      --code-bg: #1a1a2e;
+      --accent: #7b2fff;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+    
+    .blog-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      position: relative;
+    }
+    
+    /* Neon glow effect */
+    .blog-container::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      right: -50px;
+      bottom: -50px;
+      background: radial-gradient(circle at center, 
+                  rgba(0, 240, 255, 0.1) 0%, 
+                  transparent 70%);
+      z-index: -1;
+      pointer-events: none;
+    }
+    
+    .blog-post {
+      background: rgba(10, 10, 20, 0.8);
+      border: 1px solid rgba(0, 240, 255, 0.2);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 0 30px rgba(0, 240, 255, 0.1),
+                  0 0 15px rgba(123, 47, 255, 0.1);
+      backdrop-filter: blur(5px);
+    }
+    
+    h1 {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--primary);
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+      position: relative;
+      display: inline-block;
+    }
+    
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, 
+                  var(--primary), 
+                  var(--secondary));
+      box-shadow: 0 0 10px var(--primary),
+                  0 0 20px var(--secondary);
+    }
+    
+    p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+    
+    /* Code snippet styling */
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      background: var(--code-bg);
+      color: var(--primary);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9em;
+      border: 1px solid rgba(0, 240, 255, 0.3);
+    }
+    
+    /* Floating particles for techy feel */
+    .particle {
+      position: absolute;
+      background: var(--primary);
+      border-radius: 50%;
+      opacity: 0.5;
+      z-index: -1;
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .blog-container {
+        padding: 1rem;
+      }
+      .blog-post {
+        padding: 1.5rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="blog-container">
+    <div class="blog-post">
+      <h1>My First Line of Code: Falling in Love with Java</h1>
+      <p>
+        When I first stepped into the world of programming, I had absolutely no background or experience with coding. I didn't even know what a programming language was, let alone how to use one. I remember sitting in that classroom, feeling overwhelmed and curious all at the same time. The very first language we were introduced to was Java, and although it was confusing at first, it quickly became something I grew to love.
+      </p>
+      <p>
+        The very first thing we did in Java was print <code>"Hello, World!"</code> to the screen. I still remember the excitement I felt when I saw those words appear. It felt like magic. I had typed a few words, and the computer actually did something in response. That tiny success sparked a deep interest inside me. I started to realize the potential behind learning how to code — that I could one day build something meaningful from scratch.
+      </p>
+      <p>
+        We moved on to learning the basic building blocks of Java: <code>variables</code>, <code>data types</code>, <code>conditionals</code>, and <code>loops</code>. Each new topic added a layer of understanding. I was introduced to concepts like <code>int</code>, <code>String</code>, and <code>boolean</code>, and learned how to use <code>if</code> statements and <code>while</code> loops to control the flow of a program. Every small program I wrote, even the ones that simply added two numbers together, felt like a huge achievement.
+      </p>
+      <p>
+        What really amazed me was how logic played such a big role in programming. I started to understand how instructions were structured and how one command led to another. The more I practiced, the more confident I became. I would attend every class, ask questions, and experiment on my own. Even when I made mistakes — and I made a lot — I tried to learn from them. Debugging became part of the process, and eventually part of the fun.
+      </p>
+      <p>
+        As weeks passed, we learned more advanced concepts like <code>exception handling</code>. The idea that you could anticipate and handle errors in your code felt powerful. I understood that programming wasn't just about making things work; it was about making them work well. These lessons taught me to write cleaner, more thoughtful code, and to always think a few steps ahead.
+      </p>
+      <p>
+        Looking back, I realize how important that early exposure to Java was. It laid the foundation for everything else that followed. It taught me to be patient, persistent, and passionate. That simple <code>"Hello, World!"</code> program wasn't just a line of code — it was the beginning of a journey that would change the way I see and interact with technology.
+      </p>
+      <p>
+        Java was my first taste of what it means to be a developer, and it showed me that with enough curiosity and dedication, even the most intimidating skills can become second nature. And that's something I carry with me every day as I continue to grow in the world of tech.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Create floating tech particles
+    document.addEventListener('DOMContentLoaded', () => {
+      const colors = ['#00f0ff', '#ff00f0', '#7b2fff'];
+      for (let i = 0; i < 30; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        
+        // Random properties
+        const size = Math.random() * 5 + 1;
+        const posX = Math.random() * window.innerWidth;
+        const posY = Math.random() * window.innerHeight;
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const duration = Math.random() * 20 + 10;
+        const delay = Math.random() * 5;
+        
+        // Apply styles
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${posX}px`;
+        particle.style.top = `${posY}px`;
+        particle.style.background = color;
+        particle.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+        
+        document.body.appendChild(particle);
+      }
+    });
+  </script>
+
+  <style>
+    /* Floating animation for particles */
+    @keyframes float {
+      0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0.5;
+      }
+      25% {
+        transform: translate(10px, -10px) rotate(5deg);
+        opacity: 0.7;
+      }
+      50% {
+        transform: translate(-5px, 5px) rotate(-5deg);
+        opacity: 0.3;
+      }
+      75% {
+        transform: translate(5px, 10px) rotate(3deg);
+        opacity: 0.6;
+      }
+    }
+  </style>
+</body>
+</html>

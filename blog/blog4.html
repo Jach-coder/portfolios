@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building Real Systems: The Hospital Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0a0a12;
+      --med-blue: #00f0ff;
+      --neon-green: #00ff9d;
+      --emergency-red: #ff2d54;
+      --text: #e0e0ff;
+      --glass: rgba(10, 10, 18, 0.88);
+      --code-bg: #1a1a2e;
+    }
+    
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      background-image: 
+        radial-gradient(circle at 25% 25%, 
+          rgba(0, 240, 255, 0.12) 0%, 
+          transparent 50%),
+        radial-gradient(circle at 75% 75%, 
+          rgba(0, 255, 157, 0.12) 0%, 
+          transparent 50%);
+    }
+    
+    .blog-container {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+    
+    .blog-post {
+      background: var(--glass);
+      border: 1px solid var(--med-blue);
+      border-radius: 12px;
+      padding: 3rem;
+      box-shadow: 
+        0 0 25px rgba(0, 240, 255, 0.3),
+        0 0 15px rgba(0, 255, 157, 0.2);
+      backdrop-filter: blur(8px);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .blog-post::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, 
+        rgba(255, 45, 84, 0.05) 0%, 
+        transparent 70%);
+      z-index: -1;
+      animation: pulse 15s infinite linear;
+    }
+    
+    h1 {
+      font-family: 'Fira Code', monospace;
+      color: var(--med-blue);
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+      position: relative;
+      display: inline-block;
+    }
+    
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, 
+        var(--med-blue), 
+        var(--neon-green));
+      box-shadow: 0 0 8px var(--med-blue),
+                  0 0 12px var(--neon-green);
+    }
+    
+    p {
+      margin-bottom: 1.8rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.3px;
+    }
+    
+    .highlight {
+      color: var(--neon-green);
+      font-weight: 700;
+    }
+    
+    .warning {
+      color: var(--emergency-red);
+      font-weight: 700;
+    }
+    
+    /* Medical-tech inspired floating elements */
+    .dot {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.6;
+      z-index: -1;
+      filter: blur(1px);
+    }
+    
+    /* ECG line animation */
+    .ecg-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, 
+        transparent, 
+        var(--emergency-red),
+        transparent);
+      opacity: 0.3;
+      animation: ecg 4s linear infinite;
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .blog-container {
+        padding: 0 1rem;
+      }
+      .blog-post {
+        padding: 2rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    
+    @keyframes pulse {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    @keyframes float {
+      0% {
+        transform: translate(0, 0);
+        opacity: 0.6;
+      }
+      50% {
+        transform: translate(20px, -20px);
+        opacity: 0.3;
+      }
+      100% {
+        transform: translate(0, 0);
+        opacity: 0.6;
+      }
+    }
+    
+    @keyframes ecg {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+  </style>
+</head>
+<body>
+  <div class="blog-container">
+    <div class="blog-post">
+      <div class="ecg-line"></div>
+      <h1>Building Real Systems: The Hospital Project</h1>
+      <p>
+        In our second year, we were given one of our most exciting and challenging tasks yet — to build a <span class="highlight">real-world software system</span> using <span class="highlight">C#</span>. Our team chose to develop a hospital management system, and this became one of the most defining experiences of my learning journey.
+      </p>
+      <p>
+        The goal was to create a system that could handle <span class="highlight">patient information</span>, keep records, and track illness trends. It sounded simple at first, but once we started working on it, we realized the complexity involved. We had to think like <span class="highlight">software engineers</span> — not just write code, but design solutions that would work in a real-world setting.
+      </p>
+      <p>
+        We divided the work among our team, and I was primarily responsible for handling the <span class="highlight">database design</span> and logic behind patient records. This meant learning <span class="highlight">SQL</span> more deeply, understanding relationships between tables, and ensuring that data integrity was maintained. We used <span class="highlight">Microsoft SQL Server</span> alongside our C# application, integrating both through database queries and logic.
+      </p>
+      <p>
+        The front-end of the system was designed using <span class="highlight">Windows Forms</span>, and we learned how to build <span class="highlight">user-friendly interfaces</span> that medical staff could use easily. Every click, input field, and data entry had to make sense from a user's perspective. We tested our system repeatedly to refine the experience and remove bugs.
+      </p>
+      <p>
+        There were times when things didn't work. We faced <span class="warning">bugs that took hours to solve</span>, databases that refused to connect, and logic errors that made our heads spin. But those failures taught us <span class="highlight">persistence</span>. Each error was a stepping stone that helped us understand how to troubleshoot and think critically.
+      </p>
+      <p>
+        Completing the hospital system gave us a huge sense of <span class="highlight">accomplishment</span>. It wasn't perfect, but it worked — and more importantly, it taught us the entire <span class="highlight">software development cycle</span>. From gathering requirements to design, development, testing, and deployment — we experienced it all.
+      </p>
+      <p>
+        This project gave me the <span class="highlight">confidence</span> to tackle bigger challenges. It showed me that I could build something useful, something that could potentially help people. And that's when I started to see myself not just as a student learning to code, but as a <span class="highlight">developer ready to solve problems in the real world</span>.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Create medical-tech inspired floating dots
+    document.addEventListener('DOMContentLoaded', () => {
+      const colors = ['#00f0ff', '#00ff9d', '#ff2d54'];
+      for (let i = 0; i < 25; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        
+        // Random properties
+        const size = Math.random() * 8 + 2;
+        const posX = Math.random() * window.innerWidth;
+        const posY = Math.random() * window.innerHeight;
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const duration = Math.random() * 20 + 10;
+        const delay = Math.random() * 5;
+        const blur = Math.random() * 3 + 1;
+        
+        // Apply styles
+        dot.style.width = `${size}px`;
+        dot.style.height = `${size}px`;
+        dot.style.left = `${posX}px`;
+        dot.style.top = `${posY}px`;
+        dot.style.background = color;
+        dot.style.filter = `blur(${blur}px)`;
+        dot.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+        
+        document.body.appendChild(dot);
+      }
+    });
+  </script>
+</body>
+</html>

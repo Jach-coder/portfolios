@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discovering C#: From Java to .NET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0d0d17;
+      --dotnet-purple: #9b4fff;
+      --csharp-blue: #2396fd;
+      --neon-pink: #ff2dff;
+      --text: #e0e0ff;
+      --code-bg: #1a1a2e;
+      --glass: rgba(13, 13, 23, 0.85);
+    }
+    
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      background-image: 
+        radial-gradient(circle at 25% 25%, 
+          rgba(155, 79, 255, 0.15) 0%, 
+          transparent 50%),
+        radial-gradient(circle at 75% 75%, 
+          rgba(35, 150, 253, 0.15) 0%, 
+          transparent 50%);
+    }
+    
+    .blog-container {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+    
+    .blog-post {
+      background: var(--glass);
+      border: 1px solid var(--dotnet-purple);
+      border-radius: 12px;
+      padding: 3rem;
+      box-shadow: 
+        0 0 25px rgba(155, 79, 255, 0.3),
+        0 0 15px rgba(35, 150, 253, 0.2);
+      backdrop-filter: blur(8px);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .blog-post::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, 
+        rgba(255, 45, 255, 0.05) 0%, 
+        transparent 70%);
+      z-index: -1;
+      animation: pulse 15s infinite linear;
+    }
+    
+    h1 {
+      font-family: 'Fira Code', monospace;
+      color: var(--csharp-blue);
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 10px rgba(35, 150, 253, 0.4);
+      position: relative;
+      display: inline-block;
+    }
+    
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, 
+        var(--csharp-blue), 
+        var(--dotnet-purple));
+      box-shadow: 0 0 8px var(--csharp-blue),
+                  0 0 12px var(--dotnet-purple);
+    }
+    
+    p {
+      margin-bottom: 1.8rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.3px;
+    }
+    
+    .highlight {
+      color: var(--neon-pink);
+      font-weight: 700;
+    }
+    
+    /* .NET inspired floating elements */
+    .dot {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.6;
+      z-index: -1;
+      filter: blur(1px);
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .blog-container {
+        padding: 0 1rem;
+      }
+      .blog-post {
+        padding: 2rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    
+    @keyframes pulse {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="blog-container">
+    <div class="blog-post">
+      <h1>Discovering C#: From Java to .NET</h1>
+      <p>
+        After spending a semester getting familiar with Java, our curriculum introduced us to <span class="highlight">C#</span>. At first, I thought it would be an entirely different experience, but I was pleasantly surprised to find how many similarities it shared with Java. This made the transition smoother, yet C# opened up a whole new way of thinking about programming.
+      </p>
+      <p>
+        One of the most exciting parts was learning how to work with the <span class="highlight">.NET framework</span>. Unlike the text-based applications we had written in Java, C# introduced us to event-driven programming and visual development using <span class="highlight">Windows Forms</span> in Visual Studio. It was fascinating to see how we could design user interfaces by dragging and dropping components onto a canvas.
+      </p>
+      <p>
+        <span class="highlight">Visual Studio</span> quickly became one of my favorite tools. It was my first experience using a full-fledged integrated development environment (IDE), and it made the process of writing, debugging, and testing code much more efficient. We created simple applications like calculators and login systems, but the real joy came from seeing my projects come to life visually.
+      </p>
+      <p>
+        Working with buttons, labels, text boxes, and linking them to backend logic helped me better understand how software interacts with users. I started thinking more about <span class="highlight">usability</span> and <span class="highlight">user experience</span> — not just how to make things work, but how to make them intuitive.
+      </p>
+      <p>
+        As we explored C# deeper, we learned about <span class="highlight">file handling</span>, <span class="highlight">exception management</span>, and using databases with <span class="highlight">Microsoft SQL Server</span>. I began to appreciate how powerful C# was, especially in creating desktop applications. It also taught me the importance of clean UI design and how to think from the user's perspective.
+      </p>
+      <p>
+        Looking back, learning C# was a major step in my journey. It bridged the gap between logic and design, and it gave me tools to create real-world, interactive systems. The ability to go beyond console outputs and build software with forms, colors, and controls sparked a new level of excitement in me.
+      </p>
+      <p>
+        C# taught me that programming isn't just about syntax — it's about <span class="highlight">crafting experiences</span>. And that was a lesson I carried forward into every project that followed.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Create .NET-inspired floating dots
+    document.addEventListener('DOMContentLoaded', () => {
+      const colors = ['#9b4fff', '#2396fd', '#ff2dff'];
+      for (let i = 0; i < 25; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        
+        // Random properties
+        const size = Math.random() * 8 + 2;
+        const posX = Math.random() * window.innerWidth;
+        const posY = Math.random() * window.innerHeight;
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const duration = Math.random() * 20 + 10;
+        const delay = Math.random() * 5;
+        const blur = Math.random() * 3 + 1;
+        
+        // Apply styles
+        dot.style.width = `${size}px`;
+        dot.style.height = `${size}px`;
+        dot.style.left = `${posX}px`;
+        dot.style.top = `${posY}px`;
+        dot.style.background = color;
+        dot.style.filter = `blur(${blur}px)`;
+        dot.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+        
+        document.body.appendChild(dot);
+      }
+    });
+  </script>
+
+  <style>
+    /* Floating animation for dots */
+    @keyframes float {
+      0% {
+        transform: translate(0, 0);
+        opacity: 0.6;
+      }
+      50% {
+        transform: translate(20px, -20px);
+        opacity: 0.3;
+      }
+      100% {
+        transform: translate(0, 0);
+        opacity: 0.6;
+      }
+    }
+  </style>
+</body>
+</html>

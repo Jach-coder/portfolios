@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creating Tap Tap Monster: A Game from Scratch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #1a0a0a;
+      --primary-red: #c1121f;
+      --accent-red: #e5383b;
+      --light-red: #ff758f;
+      --text: #f8f9fa;
+      --glass: rgba(26, 10, 10, 0.92);
+      --code-bg: #2b0e0e;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      background-image: 
+        linear-gradient(to bottom right, 
+          rgba(193, 18, 31, 0.15) 0%, 
+          transparent 60%),
+        linear-gradient(to top left, 
+          rgba(229, 56, 59, 0.12) 0%, 
+          transparent 60%);
+    }
+    
+    .blog-container {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+    
+    .blog-post {
+      background: var(--glass);
+      border: 1px solid var(--primary-red);
+      border-radius: 8px;
+      padding: 3rem;
+      box-shadow: 
+        0 4px 30px rgba(193, 18, 31, 0.4);
+      backdrop-filter: blur(8px);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .blog-post::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, 
+        rgba(229, 56, 59, 0.08) 0%, 
+        transparent 70%);
+      z-index: -1;
+      animation: pulse 15s infinite linear;
+    }
+    
+    h1 {
+      font-family: 'Inter', sans-serif;
+      color: var(--light-red);
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+      text-shadow: 0 0 10px rgba(255, 117, 143, 0.3);
+    }
+    
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, 
+        var(--primary-red), 
+        var(--accent-red));
+      box-shadow: 0 0 8px var(--primary-red);
+    }
+    
+    p {
+      margin-bottom: 1.8rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.3px;
+      color: var(--text);
+    }
+    
+    .highlight {
+      color: var(--light-red);
+      font-weight: 600;
+    }
+    
+    .impact {
+      color: white;
+      font-weight: 600;
+      background: linear-gradient(90deg, var(--primary-red), var(--accent-red));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 8px rgba(193, 18, 31, 0.3);
+    }
+    
+    /* Floating elements */
+    .dot {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.6;
+      z-index: -1;
+      filter: blur(1px);
+    }
+    
+    /* Game energy line animation */
+    .energy-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, 
+        transparent, 
+        var(--accent-red),
+        transparent);
+      opacity: 0.5;
+      animation: energyFlow 6s linear infinite;
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .blog-container {
+        padding: 0 1rem;
+      }
+      .blog-post {
+        padding: 2rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    
+    @keyframes pulse {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    @keyframes float {
+      0% {
+        transform: translate(0, 0);
+        opacity: 0.6;
+      }
+      50% {
+        transform: translate(20px, -20px);
+        opacity: 0.3;
+      }
+      100% {
+        transform: translate(0, 0);
+        opacity: 0.6;
+      }
+    }
+    
+    @keyframes energyFlow {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+  </style>
+</head>
+<body>
+  <div class="blog-container">
+    <div class="blog-post">
+      <div class="energy-line"></div>
+      <h1>Creating Tap Tap Monster: A Game from Scratch</h1>
+      <p>
+        After finishing our OJT, we were filled with excitement and new ideas. That's when we decided to build something different — a mobile game. We called it <span class="highlight">"Tap Tap Monster,"</span> and our goal was to challenge ourselves creatively and technically by making a fun and addictive game using Android Studio.
+      </p>
+      <p>
+        The idea was simple: players would tap on monsters as they appeared on the screen, earning points and progressing through different levels. But turning that idea into a working game required a lot more than just creativity. We had to learn how to build <span class="impact">game logic</span>, <span class="impact">animations</span>, and <span class="impact">interactive UI elements</span> — all within a platform not built specifically for game development.
+      </p>
+      <p>
+        Android Studio, while excellent for app development, presented many limitations for game creation. There was no built-in game engine, so we had to build everything manually — from sprite movements to touch responses. We researched <span class="highlight">game loops</span>, <span class="highlight">timers</span>, and how to manage <span class="highlight">frame rendering</span> efficiently to keep the experience smooth and responsive.
+      </p>
+      <p>
+        I handled most of the <span class="impact">gameplay logic</span> and interactions, making sure the monsters appeared at random intervals and that scoring worked correctly. We also created sound effects and simple animations to make the game more engaging. It was a lot of trial and error, but every challenge helped us become better developers.
+      </p>
+      <p>
+        One of the biggest lessons we learned was about <span class="impact">optimization</span>. As our game grew more complex, we noticed it started to lag on some devices. We had to revisit our code, find the bottlenecks, and refactor it to improve performance. It taught us that making software isn't just about making it work — it's about making it <span class="highlight">work well</span>.
+      </p>
+      <p>
+        In the end, we successfully launched a playable version of Tap Tap Monster. It wasn't perfect, but it worked — and it was fun! Creating a game from scratch using non-traditional tools taught us the importance of <span class="highlight">persistence</span>, <span class="highlight">creativity</span>, and <span class="impact">thinking outside the box</span>.
+      </p>
+      <p>
+        This project gave me a taste of what it feels like to be a game developer. It opened a new door in my career possibilities and showed me that if we're passionate and resourceful, there's no limit to what we can create.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Create floating particles
+    document.addEventListener('DOMContentLoaded', () => {
+      const colors = ['#c1121f', '#e5383b', '#ff758f'];
+      for (let i = 0; i < 30; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        
+        // Random properties
+        const size = Math.random() * 8 + 2;
+        const posX = Math.random() * window.innerWidth;
+        const posY = Math.random() * window.innerHeight;
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const duration = Math.random() * 15 + 5;
+        const delay = Math.random() * 5;
+        const blur = Math.random() * 3 + 1;
+        
+        // Apply styles
+        dot.style.width = `${size}px`;
+        dot.style.height = `${size}px`;
+        dot.style.left = `${posX}px`;
+        dot.style.top = `${posY}px`;
+        dot.style.background = color;
+        dot.style.filter = `blur(${blur}px)`;
+        dot.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+        
+        document.body.appendChild(dot);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My OJT Experience: Real Lessons Beyond the Classroom</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0a0a1a;
+      --govt-blue: #00a8ff;
+      --lgu-gold: #ffd700;
+      --citizen-green: #00ff88;
+      --text: #e0e0ff;
+      --glass: rgba(10, 10, 26, 0.88);
+      --code-bg: #1a1a2e;
+    }
+    
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      background-image: 
+        radial-gradient(circle at 25% 25%, 
+          rgba(0, 168, 255, 0.15) 0%, 
+          transparent 50%),
+        radial-gradient(circle at 75% 75%, 
+          rgba(255, 215, 0, 0.12) 0%, 
+          transparent 50%);
+    }
+    
+    .blog-container {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+    
+    .blog-post {
+      background: var(--glass);
+      border: 1px solid var(--govt-blue);
+      border-radius: 12px;
+      padding: 3rem;
+      box-shadow: 
+        0 0 25px rgba(0, 168, 255, 0.3),
+        0 0 15px rgba(255, 215, 0, 0.2);
+      backdrop-filter: blur(8px);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .blog-post::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, 
+        rgba(0, 255, 136, 0.05) 0%, 
+        transparent 70%);
+      z-index: -1;
+      animation: pulse 15s infinite linear;
+    }
+    
+    h1 {
+      font-family: 'Fira Code', monospace;
+      color: var(--govt-blue);
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 10px rgba(0, 168, 255, 0.4);
+      position: relative;
+      display: inline-block;
+    }
+    
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, 
+        var(--govt-blue), 
+        var(--lgu-gold));
+      box-shadow: 0 0 8px var(--govt-blue),
+                  0 0 12px var(--lgu-gold);
+    }
+    
+    p {
+      margin-bottom: 1.8rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.3px;
+    }
+    
+    .highlight {
+      color: var(--lgu-gold);
+      font-weight: 700;
+    }
+    
+    .impact {
+      color: var(--citizen-green);
+      font-weight: 700;
+    }
+    
+    /* Government-tech inspired floating elements */
+    .dot {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.6;
+      z-index: -1;
+      filter: blur(1px);
+    }
+    
+    /* Document line animation */
+    .document-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, 
+        transparent, 
+        var(--lgu-gold),
+        transparent);
+      opacity: 0.3;
+      animation: documentFlow 8s linear infinite;
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .blog-container {
+        padding: 0 1rem;
+      }
+      .blog-post {
+        padding: 2rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    
+    @keyframes pulse {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    @keyframes float {
+      0% {
+        transform: translate(0, 0);
+        opacity: 0.6;
+      }
+      50% {
+        transform: translate(20px, -20px);
+        opacity: 0.3;
+      }
+      100% {
+        transform: translate(0, 0);
+        opacity: 0.6;
+      }
+    }
+    
+    @keyframes documentFlow {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+  </style>
+</head>
+<body>
+  <div class="blog-container">
+    <div class="blog-post">
+      <div class="document-line"></div>
+      <h1>My OJT Experience: Real Lessons Beyond the Classroom</h1>
+      <p>
+        Our <span class="highlight">On-the-Job Training (OJT)</span> at the Anda Municipal LGU was an experience that taught me things I could never have learned inside the classroom. For the first time, I was able to apply my skills in a <span class="impact">professional environment</span> and witness how even the simplest contributions could have a real impact on the community.
+      </p>
+      <p>
+        During our OJT, we were exposed to a wide range of tasks. Some days we assisted in <span class="highlight">customer service</span>, helping locals with their concerns and guiding them through different government services. Other days, we handled <span class="highlight">documentation</span> — sorting and managing files, creating records, and understanding how local data was processed and stored.
+      </p>
+      <p>
+        One of the most exciting parts for me was learning about <span class="highlight">network setup</span> and basic <span class="highlight">IT infrastructure</span>. I saw how offices were connected, how routers and switches played their role, and how maintaining a reliable network was essential for daily operations. It made me appreciate the unseen work that keeps systems running behind the scenes.
+      </p>
+      <p>
+        But more than the technical skills, what stood out the most was the <span class="impact">people</span>. We were welcomed by kind and patient mentors who treated us not just as trainees, but as future professionals. They taught us the importance of <span class="highlight">discipline</span>, <span class="highlight">punctuality</span>, and <span class="highlight">communication</span>. We learned that small efforts, like helping someone print a document or troubleshoot a basic computer issue, could go a long way in improving someone's day.
+      </p>
+      <p>
+        Working in a local government office also made me see the importance of <span class="impact">technology in governance</span>. The systems we helped maintain were not just for efficiency — they were lifelines for citizens. Whether it was for health, business permits, or local planning, technology played a key role in serving the public.
+      </p>
+      <p>
+        That OJT experience gave me a broader perspective. It showed me how my skills could be used for something <span class="impact">greater than myself</span>. It reminded me that at the heart of all technology is people — and that even small contributions can create positive change in a community.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Create government-tech inspired floating dots
+    document.addEventListener('DOMContentLoaded', () => {
+      const colors = ['#00a8ff', '#ffd700', '#00ff88'];
+      for (let i = 0; i < 25; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        
+        // Random properties
+        const size = Math.random() * 8 + 2;
+        const posX = Math.random() * window.innerWidth;
+        const posY = Math.random() * window.innerHeight;
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const duration = Math.random() * 20 + 10;
+        const delay = Math.random() * 5;
+        const blur = Math.random() * 3 + 1;
+        
+        // Apply styles
+        dot.style.width = `${size}px`;
+        dot.style.height = `${size}px`;
+        dot.style.left = `${posX}px`;
+        dot.style.top = `${posY}px`;
+        dot.style.background = color;
+        dot.style.filter = `blur(${blur}px)`;
+        dot.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+        
+        document.body.appendChild(dot);
+      }
+    });
+  </script>
+</body>
+</html>

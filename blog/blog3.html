@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Hackathon: Fear, Fun, and Third Place</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0d0d17;
+      --hackathon-green: #2dff88;
+      --neon-blue: #2396fd;
+      --neon-pink: #ff2dff;
+      --text: #e0e0ff;
+      --code-bg: #1a1a2e;
+      --glass: rgba(13, 13, 23, 0.85);
+    }
+    
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      background-image: 
+        radial-gradient(circle at 25% 25%, 
+          rgba(45, 255, 136, 0.15) 0%, 
+          transparent 50%),
+        radial-gradient(circle at 75% 75%, 
+          rgba(35, 150, 253, 0.15) 0%, 
+          transparent 50%);
+    }
+    
+    .blog-container {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+    
+    .blog-post {
+      background: var(--glass);
+      border: 1px solid var(--hackathon-green);
+      border-radius: 12px;
+      padding: 3rem;
+      box-shadow: 
+        0 0 25px rgba(45, 255, 136, 0.3),
+        0 0 15px rgba(35, 150, 253, 0.2);
+      backdrop-filter: blur(8px);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .blog-post::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, 
+        rgba(255, 45, 255, 0.05) 0%, 
+        transparent 70%);
+      z-index: -1;
+      animation: pulse 15s infinite linear;
+    }
+    
+    h1 {
+      font-family: 'Fira Code', monospace;
+      color: var(--hackathon-green);
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 10px rgba(45, 255, 136, 0.4);
+      position: relative;
+      display: inline-block;
+    }
+    
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, 
+        var(--hackathon-green), 
+        var(--neon-blue));
+      box-shadow: 0 0 8px var(--hackathon-green),
+                  0 0 12px var(--neon-blue);
+    }
+    
+    p {
+      margin-bottom: 1.8rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.3px;
+    }
+    
+    .highlight {
+      color: var(--neon-pink);
+      font-weight: 700;
+    }
+    
+    /* Hackathon inspired floating elements */
+    .dot {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.6;
+      z-index: -1;
+      filter: blur(1px);
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .blog-container {
+        padding: 0 1rem;
+      }
+      .blog-post {
+        padding: 2rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    
+    @keyframes pulse {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* Floating animation for dots */
+    @keyframes float {
+      0% {
+        transform: translate(0, 0);
+        opacity: 0.6;
+      }
+      50% {
+        transform: translate(20px, -20px);
+        opacity: 0.3;
+      }
+      100% {
+        transform: translate(0, 0);
+        opacity: 0.6;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="blog-container">
+    <div class="blog-post">
+      <h1>My First Hackathon: Fear, Fun, and Third Place</h1>
+      <p>
+        Participating in my first hackathon was a mixture of nerves, excitement, and pure adrenaline. I teamed up with my friends <span class="highlight">Limos</span> and <span class="highlight">Roed</span> — none of us had ever joined a hackathon before. We had no idea what to expect, and that uncertainty made the experience both thrilling and terrifying.
+      </p>
+      <p>
+        The theme of the hackathon was broad, and we decided to build a <span class="highlight">mobile application</span> using <span class="highlight">Android Studio</span>. At the time, we had very limited knowledge about mobile development. It was a steep learning curve, and we spent hours watching tutorials, troubleshooting errors, and trying to understand how everything fit together.
+      </p>
+      <p>
+        The biggest challenge wasn't just the coding — it was the <span class="highlight">pressure of time</span>. We had to manage our limited hours wisely, work through sleep deprivation, and still keep our minds sharp enough to solve technical problems. Despite the chaos, we never gave up.
+      </p>
+      <p>
+        In those intense hours, I learned more than I had in weeks of class. I learned how to <span class="highlight">work under pressure</span>, how to collaborate closely with a team, and how to think quickly. We divided tasks, supported each other, and built a functioning prototype by the end of the competition.
+      </p>
+      <p>
+        To our surprise and delight, our project placed <span class="highlight">third</span>! That recognition wasn't just a reward — it was validation. It reminded us that stepping out of our comfort zones can lead to growth and achievement. More importantly, it showed us that we were capable of more than we thought.
+      </p>
+      <p>
+        That hackathon taught me to <span class="highlight">embrace the unknown</span>. It encouraged me to take risks, trust my instincts, and believe in my team. It was one of the most challenging and rewarding moments of my college life, and it became a turning point in my journey as a developer.
+      </p>
+      <p>
+        I still carry the lessons from that experience with me — that <span class="highlight">determination</span>, learning on the fly, and working as a team can take you further than you ever imagined.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Create hackathon-inspired floating dots
+    document.addEventListener('DOMContentLoaded', () => {
+      const colors = ['#2dff88', '#2396fd', '#ff2dff'];
+      for (let i = 0; i < 25; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        
+        // Random properties
+        const size = Math.random() * 8 + 2;
+        const posX = Math.random() * window.innerWidth;
+        const posY = Math.random() * window.innerHeight;
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const duration = Math.random() * 20 + 10;
+        const delay = Math.random() * 5;
+        const blur = Math.random() * 3 + 1;
+        
+        // Apply styles
+        dot.style.width = `${size}px`;
+        dot.style.height = `${size}px`;
+        dot.style.left = `${posX}px`;
+        dot.style.top = `${posY}px`;
+        dot.style.background = color;
+        dot.style.filter = `blur(${blur}px)`;
+        dot.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+        
+        document.body.appendChild(dot);
+      }
+    });
+  </script>
+</body>
+</html>

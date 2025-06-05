@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Resh Gemino, App Developer & System Developer. Explore my work, projects, and blog." />
+  <meta name="keywords" content="portfolio, app developer, system developer, projects, blog, resume, CV" />
+  <meta property="og:title" content="Resh Gemino - Portfolio" />
+  <meta property="og:description" content="App Developer & System Developer portfolio showcasing work, skills, and personal projects." />
+  <meta property="og:image" content="asset/profile.jpg" />
+  <meta property="og:url" content="your-portfolio-url.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Resh Gemino - Portfolio" />
+  <meta name="twitter:description" content="Explore my app development and system development portfolio" />
+  <meta name="twitter:image" content="asset/profile.jpg" />
+  <title>Resh Gemino - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="asset/style.css" />
+  
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="main-header">
+    <img src="asset/img_profile/profile.jpg" alt="Profile picture of Resh Gemino" class="profile-pic" />
+    <div class="header-text">
+      <h1>Resh Gemino</h1>
+      <p>App Developer & System Developer</p>
+    </div>
+    <div class="cv-section">
+      <a href="asset/cv/cv.html" target="_blank" class="cv-view-button">View CV</a>
+    </div>
+  </header>
+
+  <!-- Main Content Section -->
+  <main class="main-content">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <ul>
+        <li><button id="homeNav" onclick="goToSlide(0)" aria-label="Go to Home section">Home</button></li>
+        <li><button id="aboutNav" onclick="goToSlide(1)" aria-label="Go to About section">About</button></li>
+        <li><button id="projectsNav" onclick="goToSlide(2)" aria-label="Go to Projects section">Projects</button></li>
+        <li><button id="certificationsNav" onclick="goToSlide(3)" aria-label="Go to Certifications section">Certifications</button></li>
+        <li><button id="contactNav" onclick="goToSlide(4)" aria-label="Go to Contact section">Contact</button></li>
+        <li><button id="blogNav" onclick="goToSlide(5)" aria-label="Go to Blog section">Blog</button></li>
+      </ul>
+    </nav>
+
+    <!-- Slider Wrapper -->
+    <div class="slider-wrapper">
+      <button id="leftArrow" class="arrow-button" aria-label="Previous Slide">&#8592;</button>
+      <button id="rightArrow" class="arrow-button" aria-label="Next Slide">&#8594;</button>
+      <div class="slider" id="cubeSlider">
+
+    <!-- Home Slide -->
+    <section class="slide" aria-labelledby="slide-home">
+      <h2 id="slide-home">Welcome to My Portfolio</h2>
+      <p>Hello, I’m Resh Gemino. I’m an app and system developer who loves to create efficient and intuitive software solutions. Explore my work, learn more about my skills, and see how we can collaborate on exciting projects!</p>
+      <p>Feel free to reach out if you have any questions or want to discuss potential collaborations.</p>
+      
+      <!-- Short Skill Overview -->
+      <div class="skills-overview">
+        <h3>Technologies I Work With</h3>
+        <p><strong>JavaScript, Python, C#, Java, HTML, CSS</strong></p>
+      </div>
+      
+      <!-- Personal Quote or Short Bio -->
+      <div class="bio">
+        <p>"Driven by passion, I aim to build software that empowers users and enhances their daily experiences."</p>
+      </div>
+    </section>
+
+
+        <!-- About Me Slide -->
+        <section class="slide about-me-slide" aria-labelledby="slide-about">
+          <h2 id="slide-about">About Me</h2>
+          <div class="about-skill">
+            <img src="asset/img_about/js.jpg" alt="js Icon" class="skill-icon" />
+            <p><strong>HTML, CSS, JavaScript:</strong> I use these to build responsive, user-friendly interfaces. Clean design and interactivity are at the heart of my front-end development approach.</p>
+          </div>
+        
+          <div class="about-skill">
+            <img src="asset/img_about/java.jpg" alt="Java Icon" class="skill-icon" />
+            <p><strong>Java:</strong> I'm currently developing games like a tap-tap game using Java, blending logic, animation, and user experience.</p>
+          </div>
+        
+          <div class="about-skill">
+            <img src="asset/img_about/c.jpg" alt="C# Icon" class="skill-icon" />
+            <p><strong>C# with WPF:</strong> I've developed desktop systems using Windows Presentation Foundation (WPF), focusing on clean UI and solid backend functionality.</p>
+          </div>
+        
+          <div class="about-skill">
+            <img src="asset/img_about/python.jpg" alt="Python Icon" class="skill-icon" />
+            <p><strong>Python:</strong> I use Python for scripting, automation, and exploring data-based solutions to real-world problems.</p>
+          </div>
+          <div class="about-skill">
+            <img src="asset/img_about/sql.jpg" alt="SQL Icon" class="skill-icon" />
+            <p><strong>SQL & SSMS:</strong> I use SQL Server Management Studio (SSMS) to manage relational databases—writing queries, stored procedures, and designing schemas. I also integrate SQL databases with the desktop systems I build in C# using WPF, enabling real-time data storage, retrieval, and management.</p>
+          </div>        
+        </section>
+
+        <!-- Projects Slide -->
+        <section class="slide projects-slide" aria-labelledby="slide-projects">
+          <h2 id="slide-projects">My Projects</h2>
+          <div class="projects-grid">
+            <!-- Project 1: Patient Record Management System -->
+            <div class="project-card" data-description="A system created using C# and SQL to handle patient records, manage them, and monitor rising cases for the month. It allows the recording and management of patient data efficiently." data-image="asset/img_projects/project.jpg">
+              <img src="asset/img_projects/project.jpg" alt="Screenshot of the Patient Record Management System showcasing the user interface" />
+              <h3>Patient Record Management System</h3>
+            </div>
+
+            <!-- Project 2: Click Click Game (Java, Android Studio) -->
+            <div class="project-card" data-description="A fast-paced Click Click Game developed using Java in Android Studio, where players tap the screen to score points within a set time limit." data-image="asset/img_projects/project2.png">
+              <img src="asset/img_projects/project2.png" alt="Screenshot of the Click Click Game showing the game interface" />
+              <h3>Click Click Game</h3>
+            </div>
+          </div>
+        </section>
+
+        <!-- Certifications Slide -->
+        <section class="slide certifications-slide" aria-labelledby="slide-certifications">
+          <h2 id="slide-certifications">Certifications</h2>
+          <div class="certifications-grid">
+            <div class="certification-card"
+                data-image="asset/img_certificate/cert1.jpg">
+              <strong>Champion – STI Codefest: Tagisan ng Talino 2024–2025</strong>
+              <em>STI College | Issued February 2024</em>
+            </div>
+
+            <div class="certification-card"
+                data-image="asset/img_certificate/cert2.jpg">
+              <strong>1st Place – STI Codefest: Tagisan ng Talino 2023–2024</strong>
+              <em>STI College | Issued March 2023</em>
+            </div>
+
+            <div class="certification-card"
+                data-image="asset/img_certificate/cert3.jpg">
+              <strong>Best in Data Management & System Security – RHU ANDA Project</strong>
+              <em>STI College | Issued December 2024</em>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Contact Slide -->
+        <section class="slide contact-slide" aria-labelledby="slide-contact">
+          <h2 id="slide-contact">Contact</h2>
+          <p>Feel free to reach out!</p>
+          <div class="contact-info">
+            <a href="mailto:jachinigop@gmail.com" aria-label="Email" class="contact-icon">
+              <img src="asset/img_contact/email.jpg" alt="Email" />
+            </a>
+            <a href="https://github.com/Jach-coder/portfolio.git" target="_blank" aria-label="GitHub" class="contact-icon">
+              <img src="asset/img_contact/github.jpg" alt="GitHub" />
+            </a>
+            <a href="https://www.linkedin.com/in/resh-gemino-29b8b2333/" target="_blank" aria-label="LinkedIn" class="contact-icon">
+              <img src="asset/img_contact/linkn.jpg" alt="LinkedIn" />
+            </a>
+          </div>
+
+          <form class="custom-contact-form" id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+          </form>          
+        </section>
+
+        <!-- Blog Section with 6 Clickable Cards -->
+        <section class="slide" aria-labelledby="slide-blog">
+          <div class="blog-grid-container">
+            <h2 id="slide-blog">My Development Journey</h2>
+            <p class="subtitle">From first code to complete projects</p>
+            
+            <div class="blog-grid">
+              <!-- Card 1 - Learning Java -->
+              <a href="/blog/blog1.html" class="blog-card" aria-label="Read about my Java learning experience">
+                <div class="card-icon">☕</div>
+                <h3>Learning Java</h3>
+                <p>My first steps into object-oriented programming</p>
+              </a>
+              
+              <!-- Card 2 - Learning C# -->
+              <a href="/blog/blog2.html" class="blog-card" aria-label="Read about my C# learning journey">
+                <div class="card-icon">#</div>
+                <h3>Learning C#</h3>
+                <p>Transitioning to Microsoft's powerful language</p>
+              </a>
+              
+              <!-- Card 3 - First Hackathon -->
+              <a href="/blog/blog3.html" class="blog-card" aria-label="Read about my first hackathon experience">
+                <div class="card-icon">⚡</div>
+                <h3>First Hackathon</h3>
+                <p>intense coding and learning</p>
+              </a>
+              
+              <!-- Card 4 - Building Systems -->
+              <a href="/blog/blog4.html" class="blog-card" aria-label="Read about my system development projects">
+                <div class="card-icon">🏗️</div>
+                <h3>Building Systems</h3>
+                <p>Creating complete software solutions</p>
+              </a>
+              
+              <!-- Card 5 - OJT Experience -->
+              <a href="/blog/blog5.html" class="blog-card" aria-label="Read about my OJT experience">
+                <div class="card-icon">💼</div>
+                <h3>OJT Experience</h3>
+                <p>Real-world learning at the municipal government</p>
+              </a>
+              
+              <!-- Card 6 - Tap Tap Monster -->
+              <a href="/blog/blog6.html" class="blog-card" aria-label="Read about my game development project">
+                <div class="card-icon">👾</div>
+                <h3>Tap Tap Monster</h3>
+                <p>Developing my first mobile game in Android Studio</p>
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Slide Indicators -->
+    <div class="slide-indicators" id="slideIndicators" aria-label="Slide navigation">
+      <span onclick="goToSlide(0)" aria-label="Go to Home slide"></span>
+      <span onclick="goToSlide(1)" aria-label="Go to About slide"></span>
+      <span onclick="goToSlide(2)" aria-label="Go to Projects slide"></span>
+      <span onclick="goToSlide(3)" aria-label="Go to Certifications slide"></span>
+      <span onclick="goToSlide(4)" aria-label="Go to Contact slide"></span>
+      <span onclick="goToSlide(5)" aria-label="Go to Blog slide"></span>
+    </div>
+  </main>
+
+<!-- Modal for Information -->
+<div id="infoModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close-btn" style="display: none;">&times;</span>
+    <img id="modalImage" src="" alt="Modal Visual" />
+    <h3 id="modalTitle"></h3>
+    <p id="modalDescription"></p>
+  </div>
+</div>
+
+  <!-- External JavaScript -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="src/script/script.js"></script> 
+  <script src="src/script/Contactform.js"></script>
+</body>
+</html>
